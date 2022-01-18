@@ -6,10 +6,10 @@ namespace pocEtiquetas.WebApi.Controllers;
 [Route("/")]
 public class InstructionsController : ControllerBase {
 
-    public PdfFileController() {}
+    public InstructionsController() {}
 
     [HttpGet]
-    public string Infos() {
+    public String Infos() {
         return "Acessar https://poc-etiquetas.herokuapp.com/PdfFile/ + nomeDoArquivo";
     } 
 }
