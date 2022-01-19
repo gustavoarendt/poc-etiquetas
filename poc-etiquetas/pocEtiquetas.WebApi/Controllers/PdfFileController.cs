@@ -17,6 +17,6 @@ public class PdfFileController : ControllerBase {
         var stream = new FileStream(Path.Combine(_filePath, _fileName), FileMode.Open);
         if(stream == null)
             return NotFound();
-        return File(stream, "application/pdf", $"{pdfName}.pdf");
+        return File(stream, "application/octet-stream", $"{pdfName}.pdf");
     } 
 }
