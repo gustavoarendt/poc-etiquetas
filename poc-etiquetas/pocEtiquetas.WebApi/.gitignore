@@ -87,8 +87,8 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
-bin/*
-obj/*
+bin/
+obj/
 Debug/
 Release/
 
