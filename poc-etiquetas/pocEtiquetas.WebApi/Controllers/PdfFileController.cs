@@ -15,10 +15,8 @@ public class PdfFileController : ControllerBase {
     [HttpGet("{pdfName}")]
     public IActionResult Download(string pdfName) {
         var stream = new FileStream(Path.Combine(_filePath, _fileName), FileMode.Open);
-        
         if(stream == null)
-            return NotFound(); // returns a NotFoundResult with Status404NotFound response.
-
-        return File(stream, "application/octet-stream", $"{pdfName}.pdf"); // returns a FileStreamResult
+            return NotFound();
+        return File(stream, "application/pdf", $"{pdfName}.pdf");
     } 
 }
