@@ -10,8 +10,14 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
-  <Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
+  <!-- <Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
     <Copy SourceFiles="files/pdfCrescer.pdf" DestinationFolder="$(PublishDir)/files" />
-  </Target>
+  </Target> -->
+
+  <ItemGroup>
+    <None Update="files/pdfCrescer.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
 </Project>
